@@ -48,7 +48,7 @@ The Hugging Face dataset stores images directly. The training preparation script
 
 ## Training and Reproduction
 
-We provide a **Qwen2-VL-7B-Instruct LoRA fine-tuning recipe** based on LLaMA-Factory. The paper also evaluates SRR on Qwen2.5-VL and LLaVA-NeXT; their training configurations are not part of this initial release.
+We provide a **Qwen2-VL-7B-Instruct LoRA fine-tuning recipe** based on LLaMA-Factory. 
 
 ### 1. Prepare the data
 
