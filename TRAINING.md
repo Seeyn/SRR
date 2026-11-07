@@ -81,7 +81,7 @@ Key hyperparameters preserved from the supplied YAML:
 | Epochs | `3` |
 | Scheduler / warmup | `cosine` / `0.1` |
 | Precision | `bf16` |
-| Evaluation | Not enabled in the provided YAML |
+
 
 ## Responsible use
 
