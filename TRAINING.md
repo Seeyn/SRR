@@ -23,7 +23,7 @@ SRR/
 
 ## 1. Install LLaMA-Factory
 
-Follow the [official installation instructions](https://github.com/hiyouga/LlamaFactory). The installed version of LLaMA-Factory, transformers, torch, PEFT, CUDA and Python should be documented for strict reproducibility. The historical version used for the paper was not supplied in the available settings.
+Follow the [official installation instructions](https://github.com/hiyouga/LlamaFactory). 
 
 For data export only:
 
