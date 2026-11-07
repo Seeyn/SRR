@@ -46,7 +46,7 @@ image = dataset[0]["image"]
 
 The Hugging Face dataset stores images directly. The training preparation script below exports them into local image files and generates a ShareGPT-style JSONL file for LLaMA-Factory, avoiding machine-specific absolute paths.
 
-## Training and Reproduction
+## Training
 
 We provide a **Qwen2-VL-7B-Instruct LoRA fine-tuning recipe** based on LLaMA-Factory. 
 
