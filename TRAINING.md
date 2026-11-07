@@ -83,14 +83,6 @@ Key hyperparameters preserved from the supplied YAML:
 | Precision | `bf16` |
 | Evaluation | Not enabled in the provided YAML |
 
-**Important missing metadata to verify:**
-
-- The original YAML specifies `dataset: sinr_woobsthink`, while the provided dataset registry entry is named `sinr_woobs`. The public recipe consistently renames both to `srr_train`. Check that the released HF dataset contains exactly the examples used by the actual original experiment.
-- LoRA rank, alpha, dropout and target modules were **not set explicitly** in the supplied YAML. They may depend on the historical LLaMA-Factory defaults or separate arguments. Do not assume values without verification.
-- The effective batch size is `per_device_train_batch_size * gradient_accumulation_steps * number_of_processes`, which is `16 × number of processes` for this recipe (32 on 2 processes/GPUs).
-- For strict reproducibility, add seed, GPU count, framework commit and package/CUDA versions from the original run.
-- This package preserves the supplied training settings; it has not been run through a full GPU training or independent benchmark reproduction.
-
 ## Responsible use
 
 The publicly released SRR dataset is licensed under CC BY-NC 4.0. Refer to the dataset card and upstream source licensing/usage conditions. This recipe is for research reproducibility; performance on SRR evaluation benchmarks does not ensure safety-critical deployment readiness.
