@@ -46,6 +46,21 @@ image = dataset[0]["image"]
 
 The Hugging Face dataset stores images directly. The training preparation script below exports them into local image files and generates a ShareGPT-style JSONL file for LLaMA-Factory, avoiding machine-specific absolute paths.
 
+## Model Weights
+
+We release LoRA adapter weights for models fine-tuned
+on the SRR dataset.
+
+| Backbone | Model Weights |
+|---|---|
+| Qwen2-VL-7B-Instruct | [Download](https://huggingface.co/Anonymous-SRR/SRR-Qwen2-VL-7B-LoRA) |
+
+The adapters can be loaded with the corresponding
+base models using Hugging Face PEFT.
+
+See [TRAINING.md](TRAINING.md) for the training
+configuration and reproduction instructions.
+
 ## Training
 
 We provide a **Qwen2-VL-7B-Instruct LoRA fine-tuning recipe** based on LLaMA-Factory. 
