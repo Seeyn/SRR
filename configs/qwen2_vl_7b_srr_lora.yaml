@@ -1,0 +1,40 @@
+### Model
+model_name_or_path: Qwen/Qwen2-VL-7B-Instruct
+trust_remote_code: true
+
+### Method
+stage: sft
+do_train: true
+finetuning_type: lora
+# The original user-provided YAML does not explicitly set lora_rank,
+# lora_alpha, lora_dropout, or lora_target. Verify the historical
+# LLaMA-Factory version and effective defaults before claiming exact reproduction.
+
+### Dataset
+dataset_dir: data
+dataset: srr_train
+template: qwen2_vl
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 8
+
+### Output
+output_dir: saves/qwen2_vl-7b/lora/srr_sft
+logging_steps: 10
+save_steps: 100
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### Training
+learning_rate: 2e-4
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+
+# The original configuration did not enable evaluation (no val_size/eval_strategy).
+# Effective global batch size = 2 * 8 * number_of_GPUs = 16 * number_of_GPUs.
