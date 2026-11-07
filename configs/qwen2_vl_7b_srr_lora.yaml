@@ -35,6 +35,9 @@ num_train_epochs: 3
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
-
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.0
+lora_target: all
 # The original configuration did not enable evaluation (no val_size/eval_strategy).
 # Effective global batch size = 2 * 8 * number_of_GPUs = 16 * number_of_GPUs.
