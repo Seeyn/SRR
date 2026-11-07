@@ -2,7 +2,7 @@
 
 **NeurIPS 2026 · Evaluations and Datasets Track**
 
-[🤗 **SRR Dataset (Hugging Face)**](https://huggingface.co/datasets/Anonymous-SRR/SRR) · [**Training and Reproduction**](TRAINING.md)
+[🤗 **SRR Dataset (Hugging Face)**](https://huggingface.co/datasets/Anonymous-SRR/SRR) 
 
 > **An activity can be safe in isolation but unsafe in context.** Situational Risk Reasoning (SRR) provides supervision for vision-language models (VLMs) to identify safety risks arising from the interaction between a user's intended activity and the surrounding visual scenario.
 
