@@ -102,8 +102,6 @@ FORCE_TORCHRUN=1 CUDA_VISIBLE_DEVICES=0,1 \
 LoRA values and target modules were verified against the trained adapter's `adapter_config.json`. For complete settings, data-format details, and limitations of exact reproducibility, refer to **[TRAINING.md](TRAINING.md)** and `configs/qwen2_vl_7b_srr_lora.yaml`.
 
 
-**Release scope:** This repository provides the data preparation and Qwen2-VL LoRA training recipe. A downloadable fine-tuned checkpoint and standalone evaluation runners are **not included in this release**. The reported results should not be interpreted as guarantees for real-world safety-critical use.
-
 ## Responsible Use and Limitations
 
 SRR is intended for research on VLM post-training and situational safety reasoning. Its synthetic images and automatically generated reasoning targets may contain imperfections. Human validation was conducted on a sample rather than every training example. Benchmark performance does not establish suitability for safety-critical real-world deployment.
